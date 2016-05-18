@@ -6,26 +6,21 @@
         <b>name: </b>{{user.name}}<br>
         <b>password: </b>{{user.password}}<br>
         <b>email: </b>{{user.email}}<br>
-
         <div class="row">
-                <!--<b>Productes:</b><br>-->
-                <!--<ul ng-repeat="producte in user.productes">-->
-                    <!--<li>{{producte}} | <b>Title: </b> {{producte.title}}</li>-->
-                <!--</ul>-->
-                <div ng-repeat="producte in user.productes">
+            <!-- populate ID's info from books document -->
+            <div ng-repeat="producte in user.productes">
+                <div class="col-md-6">
                     <div class="col-md-6">
-                        <div class="col-md-6">
-                            <h3>{{producte.title}}</h3>
-                            <b>{{producte.genre}}</b>
-                            <p>{{producte.description}}</p>
-                            <a class="btn btn-primary" href="#/books/details/{{producte._id}}">View Details</a>
-                        </div>
-                        <div class="col-md-6">
-                            <img class="thumbnail" src="{{producte.img_url}}">
-                        </div>
+                        <h3>{{producte.title}}</h3>
+                        <b>{{producte.genre}}</b>
+                        <p>{{producte.description}}</p>
+                        <a class="btn btn-primary" href="#/books/details/{{producte._id}}">View Details</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="thumbnail" src="{{producte.img_url}}">
                     </div>
                 </div>
-
+            </div>
         </div>
     </div>
 </div>
